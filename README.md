@@ -1,36 +1,39 @@
 # Animated Todo App
 
-A beautiful and functional todo application built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features smooth animations, local storage persistence, and a clean, modern interface.
+A beautiful animated todo list application built with Next.js 14, TypeScript, and Tailwind CSS. Features smooth animations powered by Framer Motion and persistent storage using localStorage.
 
 ## Features
 
 - ✅ Add, complete, and delete todos
-- 🔍 Filter todos by status (All, Active, Completed)
-- 💾 Automatic local storage persistence
-- 🎨 Smooth animations and transitions
+- 🎨 Beautiful animations and transitions
+- 💾 Persistent storage with localStorage
 - 📱 Responsive design
-- 🎯 Real-time todo counter
-- 🗑️ Clear completed todos
+- 🎯 Task counter
+- ⚡ Built with Next.js 14 App Router
 
 ## Tech Stack
 
 - **Next.js 14** - React framework with App Router
-- **TypeScript** - Type-safe JavaScript
+- **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Production-ready motion library for React
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
 
 ## Getting Started
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Project Structure
 
@@ -38,31 +41,34 @@ A beautiful and functional todo application built with Next.js 14, TypeScript, T
 ├── app/
 │   ├── api/
 │   │   └── ping/
-│   │       └── route.ts
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
+│   │       └── route.ts      # Health check endpoint
+│   ├── globals.css           # Global styles
+│   ├── layout.tsx            # Root layout
+│   └── page.tsx              # Main todo page
 ├── components/
-│   ├── TodoApp.tsx
-│   └── TodoItem.tsx
+│   ├── ui/
+│   │   ├── button.tsx        # Button component
+│   │   └── input.tsx         # Input component
+│   └── todo-item.tsx         # Individual todo item
 ├── lib/
-│   ├── hooks/
-│   │   └── useTodos.ts
-│   └── types.ts
-├── .gitignore
-├── next.config.js
-
-tailwind.config.ts
-├── tsconfig.json
-└── package.json
+│   └── todo-manager.ts       # Todo management logic
+└── public/                   # Static assets
 ```
 
-## Scripts
+## Usage
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+1. **Add a todo**: Type your task in the input field and click "Add Todo" or press Enter
+2. **Complete a todo**: Click the circle icon to mark a task as complete
+3. **Delete a todo**: Hover over a task and click the X button to delete it
+4. **View progress**: See the number of remaining tasks at the bottom
+
+## Build
+
+To create a production build:
+
+```bash
+npm run build
+```
 
 ## License
 
